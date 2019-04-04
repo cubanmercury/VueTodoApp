@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="add-todo-container">
         <form @submit="addTodo">
             <input type="text" v-model="title" name="title" placeholder="Add Todo ..." />
             <input type="submit" value="submit" class="btn" />
@@ -42,5 +42,9 @@ export default {
     }
     input[type="submit"]{
         flex: 2;
+    }
+    .add-todo-container{
+        width: 100%;
+        margin: 50px 0 15px 0; 
     }
 </style>

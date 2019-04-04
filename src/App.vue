@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <AddTodo v-on:add-todo="addTodo" />
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <div class="todo-container">
+      <AddTodo v-on:add-todo="addTodo" />
+      <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    </div>
   </div>
 </template>
 
@@ -68,8 +70,22 @@ body{
   color: #fff;
   padding: 7px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 .btn:hover{
   background: #666;
+}
+#app{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+.todo-container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 40%;
+  height: auto;
 }
 </style>
