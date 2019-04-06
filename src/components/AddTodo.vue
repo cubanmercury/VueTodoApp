@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import uuid from 'uuid';
+//import uuid from 'uuid';
 export default {
     name: "AddTodo",
     data() {
@@ -20,8 +20,7 @@ export default {
         addTodo(e) {
             e.preventDefault();
             const newTodo = {
-                id: uuid.v4(),
-                title: this.title,
+                title: this.title,      //json placeholder assigns an id to each todo when the post request is made
                 completed: false
             }
             //send up to parent
